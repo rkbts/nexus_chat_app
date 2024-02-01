@@ -29,7 +29,9 @@ mongoose
 const server = app.listen(process.env.PORT, () =>
   console.log(`Server started on ${process.env.PORT}`)
 );
-
+app.get("/", (req, res) => {
+  res.json("hello");
+})
 const io = socket(server, {
   cors: {
     origin:"http://localhost:3000",
