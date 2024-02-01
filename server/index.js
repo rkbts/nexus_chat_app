@@ -6,14 +6,6 @@ const messageRoute = require('./routes/messagesRoute')
 const socket = require('socket.io')
 const app = express();
 
-app.use(cors(
-  {
-    origin: ["https://nexus-chat-app.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-));
-
 require("dotenv").config();
 
 app.use(cors());
